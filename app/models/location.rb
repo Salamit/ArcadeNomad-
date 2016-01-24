@@ -7,10 +7,12 @@ class Location < ActiveRecord::Base
     
     def telephone=(value)
     	write_attribute(:telephone, value.gsub(/[^0-9]/i, ''))
+    
     end
 
     def address
     	street + ' ' + city + ', ' + state + ' ' + zip
+    
     end
 
 end
